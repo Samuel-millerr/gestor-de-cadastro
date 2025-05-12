@@ -1,4 +1,4 @@
-import tkinter as tk
+import tkinter as ttk
 from openpyxl import Workbook, load_workbook
 from tkinter import messagebox
 
@@ -18,11 +18,11 @@ def mostrar_inter_cliente():
             'Score' : score
         })
         
-        case1.delete(0, tk.END)
-        case2.delete(0, tk.END)
-        case3.delete(0, tk.END)
-        case4.delete(0, tk.END)
-        case5.delete(0, tk.END)
+        case1.delete(0, ttk.END)
+        case2.delete(0, ttk.END)
+        case3.delete(0, ttk.END)
+        case4.delete(0, ttk.END)
+        case5.delete(0, ttk.END)
 
         
     def salvar_em_excel(): 
@@ -56,49 +56,49 @@ def mostrar_inter_cliente():
             messagebox.showerror("Erro", "Arquivo 'clientes.xlsx' não encontrado.")
                     
                     
-    window = tk.Tk()
+    window = ttk.Tk()
     window.title("Cadastro Cliente")
 
     cliente = []
     
-    l1 = tk.Label(window, text = "Digite as informações do cliente a seguir:")
+    l1 = ttk.Label(window, text = "Digite as informações do cliente a seguir:")
     l1.grid(row = 0, column= 0,pady= 2)
 
-    l2 = tk.Label(window, text = "Nome:")
+    l2 = ttk.Label(window, text = "Nome:")
     l2.grid(row = 1, column=0, pady = 2)
-    case1 = tk.Entry(window)
+    case1 = ttk.Entry(window)
     case1.grid(row = 1, column= 1, pady=2)
 
-    l3 = tk.Label(window, text = "Data de Nascimento:")
+    l3 = ttk.Label(window, text = "Data de Nascimento:")
     l3.grid(row = 2, column=0, pady = 2)
-    case2 = tk.Entry(window)
+    case2 = ttk.Entry(window)
     case2.grid(row=2, column=1, pady = 2)
 
-    l4 = tk.Label(window, text = "CPF:")
+    l4 = ttk.Label(window, text = "CPF:")
     l4.grid(row = 3, column = 0, pady = 2)
-    case3 = tk.Entry(window)
+    case3 = ttk.Entry(window)
     case3.grid(row = 3, column = 1, pady = 2)
 
-    l5 = tk.Label(window, text = "Origem:")
+    l5 = ttk.Label(window, text = "Origem:")
     l5.grid(row = 4, column = 0, pady = 1)
-    case4 = tk.Entry(window)
+    case4 = ttk.Entry(window)
     case4.grid(row = 4, column = 1, pady = 2)
 
-    l6 = tk.Label(window, text = "Score:")
+    l6 = ttk.Label(window, text = "Score:")
     l6.grid(row = 5, column = 0, pady = 2)
-    case5 = tk.Entry(window)
+    case5 = ttk.Entry(window)
     case5.grid(row = 5, column = 1, pady = 2)
            
-    button = tk.Button(window, text = "Inserir", command = inserir_cliente)
+    button = ttk.Button(window, text = "Inserir", command = inserir_cliente)
     button.grid(row = 6, column = 1, pady = 2)
     
-    button = tk.Button(window, text = "Adicionar ao Exel", command = salvar_em_excel)
+    button = ttk.Button(window, text = "Adicionar ao Exel", command = salvar_em_excel)
     button.grid(row = 7, column = 1, pady =2)
     
-    casex = tk.Entry(window)
+    casex = ttk.Entry(window)
     casex.grid(row = 8, column = 1, pady = 2)
     
-    button = tk.Button(window, text = "Consultar Cliente", command = consultar_dados)
+    button = ttk.Button(window, text = "Consultar Cliente", command = consultar_dados)
     button.grid(row = 9, column = 1, pady =2)
 
     window.geometry("400x265")
@@ -117,9 +117,9 @@ def mostrar_interface_produto():
                      'Categoria' : categ
         })
         
-        case1.delete(0, tk.END)
-        case2.delete(0, tk.END)
-        case3.delete(0, tk.END)
+        case1.delete(0, ttk.END)
+        case2.delete(0, ttk.END)
+        case3.delete(0, ttk.END)
 
     
     def salvar_em_excel(): 
@@ -151,37 +151,37 @@ def mostrar_interface_produto():
             messagebox.showerror("Erro", "Arquivo 'produtos.xlsx' não encontrado.")
             
         
-    window = tk.Tk()
+    window = ttk.Tk()
     window.title("Cadastro Produto")
 
-    l1 = tk.Label(window, text = "Digite as informações do produto: ")
+    l1 = ttk.Label(window, text = "Digite as informações do produto: ")
     l1.grid(row = 0, column = 0, pady = 2)
 
-    l2 = tk.Label(window, text = "Nome do Produto: ")
+    l2 = ttk.Label(window, text = "Nome do Produto: ")
     l2.grid(row = 1, column = 0, pady = 2)
-    case1 = tk.Entry(window)
+    case1 = ttk.Entry(window)
     case1.grid(row = 1, column = 1, pady =2)
 
-    l3 = tk.Label(window, text = "Valor:")
+    l3 = ttk.Label(window, text = "Valor:")
     l3.grid(row = 2, column = 0, pady = 2)
-    case2 = tk.Entry(window)
+    case2 = ttk.Entry(window)
     case2.grid(row = 2, column = 1, pady = 2)
 
-    l4 = tk.Label(window, text = "Categoria:")
+    l4 = ttk.Label(window, text = "Categoria:")
     l4.grid(row = 3, column = 0, pady = 2)
-    case3 = tk.Entry(window)
+    case3 = ttk.Entry(window)
     case3.grid(row = 3, column = 1, pady = 2)
 
-    button = tk.Button(window, text = "Inserir", command = inserir_produto)
+    button = ttk.Button(window, text = "Inserir", command = inserir_produto)
     button.grid(row = 4, column = 1, pady = 2)
     
-    button = tk.Button(window, text = "Adicionar ao Exel", command = salvar_em_excel)
+    button = ttk.Button(window, text = "Adicionar ao Exel", command = salvar_em_excel)
     button.grid(row = 5, column = 1, pady = 2)
 
-    casex = tk.Entry(window)
+    casex = ttk.Entry(window)
     casex.grid(row = 6, column = 1, pady = 2)
     
-    button = tk.Button(window, text = "Consultar", command = consultar_dados)
+    button = ttk.Button(window, text = "Consultar", command = consultar_dados)
     button.grid(row = 7, column = 1,pady = 2)
     
     prod = []
@@ -199,8 +199,8 @@ def mostar_interface_vendedor():
                      'Matrícula' : matri
         })
         
-        case1.delete(0, tk.END)
-        case2.delete(0, tk.END)  
+        case1.delete(0, ttk.END)
+        case2.delete(0, ttk.END)  
        
     def salvar_no_excel(): 
         try:
@@ -230,48 +230,48 @@ def mostar_interface_vendedor():
         except FileNotFoundError:
             messagebox.showerror("Erro", "Arquivo 'vendedor.xlsx' não encontrado.")
             
-    window = tk.Tk()
+    window = ttk.Tk()
     window.title("Cadastro Vendedor")
 
-    l1 = tk.Label(window, text = "Insira os dados do vendedor: ")
+    l1 = ttk.Label(window, text = "Insira os dados do vendedor: ")
     l1.grid(row = 0, column = 0, pady = 2)
 
-    l2 = tk.Label(window, text = "Nome do Vendedor:")
+    l2 = ttk.Label(window, text = "Nome do Vendedor:")
     l2.grid(row = 1, column = 0, pady = 2)
-    case1 = tk.Entry(window)
+    case1 = ttk.Entry(window)
     case1.grid(row = 1, column = 1, pady = 2)
 
-    l3 = tk.Label(window, text = "Matrícula:")
+    l3 = ttk.Label(window, text = "Matrícula:")
     l3.grid(row = 2, column = 0, pady = 2)
-    case2 = tk.Entry(window)
+    case2 = ttk.Entry(window)
     case2.grid(row = 2, column = 1, pady = 2)
 
-    button = tk.Button(window, text = "Inserir", command = inserir_vendedor)
+    button = ttk.Button(window, text = "Inserir", command = inserir_vendedor)
     button.grid(row = 3, column = 1, pady = 2)
 
-    button = tk.Button(window, text = "Adicionar ao Exel", command = salvar_no_excel)
+    button = ttk.Button(window, text = "Adicionar ao Exel", command = salvar_no_excel)
     button.grid(row = 4, column = 1, pady = 2)
     
-    casex = tk.Entry(window)
+    casex = ttk.Entry(window)
     casex.grid(row = 5, column = 1, pady = 2)
     
-    button = tk.Button(window, text = "Consultar", command = consultar_dados)
+    button = ttk.Button(window, text = "Consultar", command = consultar_dados)
     button.grid(row = 6, column = 1, pady = 2)
     
     
     window.geometry("300x195")
     window.mainloop()
 
-window = tk.Tk()
+window = ttk.Tk()
 window.title("Cadastro")
 
-l1 = tk.Label(window, text = "Essas são as três opções para inserir informações")
+l1 = ttk.Label(window, text = "Essas são as três opções para inserir informações")
 l1.grid(row = 0, column = 0, pady = 2)
-button1 = tk.Button(window, text = "Cliente", command = mostrar_inter_cliente)
+button1 = ttk.Button(window, text = "Cliente", command = mostrar_inter_cliente)
 button1.grid(row = 1, column = 0, pady = 2)
-button2 = tk.Button(window, text = "Produto", command = mostrar_interface_produto)
+button2 = ttk.Button(window, text = "Produto", command = mostrar_interface_produto)
 button2.grid(row = 2, column = 0, pady = 2)
-button3 = tk.Button(window, text = "Vendedor",command = mostar_interface_vendedor)
+button3 = ttk.Button(window, text = "Vendedor",command = mostar_interface_vendedor)
 button3.grid(row = 3, column = 0, pady = 2)
 
 window.geometry("262x135")
